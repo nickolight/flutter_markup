@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_markup/markup.dart';
+import 'package:flutter_markup/markup_page.dart';
 import 'package:flutter_markup/utils.dart';
 
 void main() {

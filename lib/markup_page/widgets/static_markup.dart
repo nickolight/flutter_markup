@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markup/constants.dart';
-import 'package:flutter_markup/item_tile.dart';
+import 'package:flutter_markup/markup_page/widgets/item_tile.dart';
 import 'package:flutter_markup/markup_page/widgets/logo.dart';
 
 class StaticMarkup extends StatelessWidget {

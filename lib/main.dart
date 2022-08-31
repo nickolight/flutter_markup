@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markup/markup.dart';
+import 'package:flutter_markup/utils.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MarkupPage(),
+      home: MarkupPage(items: Utils.generateListOfString(5)),
     );
   }
 }

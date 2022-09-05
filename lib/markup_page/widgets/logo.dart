@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markup/constants.dart';
 
 class Logo extends StatelessWidget {
-  const Logo({Key? key}) : super(key: key);
+  const Logo({Key? key, required this.image}) : super(key: key);
+
+  final Image image;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(30.0),
-      child: Image.asset(
-        'assets/logo.png',
-      ),
+      padding: const EdgeInsets.all(Constants.logoMargin),
+      child: image,
     );
   }
 }

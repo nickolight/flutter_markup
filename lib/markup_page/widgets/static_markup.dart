@@ -8,20 +8,23 @@ class StaticMarkup extends StatelessWidget {
     Key? key,
     required this.items,
     required this.tileSize,
+    required this.image,
   }) : super(key: key);
 
   final List<String> items;
   final Size tileSize;
+  final Image image;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Expanded(
-          child: Logo(),
-        ),
         Expanded(
-          child: GridView.count(
+          child: Logo(image: image),
+        ),
+        if (items.isNotEmpty)
+          GridView.count(
+            shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             crossAxisCount: Constants.numberOfColumns,
             childAspectRatio: Constants.aspectRatio,
@@ -33,7 +36,6 @@ class StaticMarkup extends StatelessWidget {
               (index) => ItemTile(text: items[index], size: tileSize),
             ),
           ),
-        ),
       ],
     );
   }

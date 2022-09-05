@@ -8,10 +8,12 @@ class ScrollableMarkup extends StatelessWidget {
     Key? key,
     required this.items,
     required this.tileSize,
+    required this.image,
   }) : super(key: key);
 
   final List<String> items;
   final Size tileSize;
+  final Image image;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class ScrollableMarkup extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const Logo(),
+            Logo(image: image),
             GridView.count(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MarkupPage(items: Utils.generateListOfString(5)),
+      home: MarkupPage(items: Utils.generateListOfString(0)),
     );
   }
 }
